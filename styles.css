@@ -1,0 +1,476 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(17, 20px);
+    grid-template-rows: repeat(17, 20px);
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wall-space {
+    cursor: pointer;
+    background-color: #e0e0e0;
+}  
+
+.pawn {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.pawn2 {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.wall-space.horizontal.wall {
+    background-color: #555;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+}
+
+.wall-space.vertical.wall {
+    background-color: #555;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+}
+
+.wall {
+    background-color: #000;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+#win-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#win-message p {
+    font-size: 1.5em;
+}
+
+.mode-selection, #test-section, #results-section {
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    color: #29b4c1;
+    margin-bottom: 20px;
+}
+
+.mode-selection h2, #test-section h2, #results-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff4081;
+}
+
+.mode {
+    margin-bottom: 20px;
+}
+
+.mode h3 {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    color: #64ffda;
+}
+
+.mode p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+button {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+button.strongly-agree {
+    background-color: #4caf50; /* Green */
+    color: white;
+}
+
+button.agree {
+    background-color: #8bc34a; /* Light Green */
+    color: white;
+}
+
+button.neutral {
+    background-color: #ffeb3b; /* Yellow */
+    color: black;
+}
+
+button.disagree {
+    background-color: #ff9800; /* Orange */
+    color: white;
+}
+
+button.strongly-disagree {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ff4081;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.download-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.download-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #64ffda;
+}
+
+.download-section a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.download-section a:hover {
+    background-color: #036ee0;
+    transform: scale(1.05);
+}
+
+.video-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-left {
+    left: 10px;
+}
+
+.video-right {
+    right: 10px;
+}
+
+.video-left video, .video-right video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.mute-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mute-button:hover {
+    background-color: #e03070;
+}
+
+.toggle-video {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-video:hover {
+    background-color: #e03070;
+}
+
+.playlist-section {
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.playlist-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff4081;
+}
+
+.playlist-section input {
+    margin-bottom: 10px;
+}
+
+button {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.playlist-container {
+    background: #333;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 100%;
+}
+
+#playlist {
+    list-style: none;
+    padding: 0;
+}
+
+#playlist li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#playlist li img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#playlist li .song-details {
+    flex: 1;
+}
+
+#playlist li .song-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #64ffda;
+}
+
+#playlist li .song-details p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+#playlist li audio {
+    width: 200px;
+}
+
+#playlist li button {
+    background-color: #f44336;
+    color: white;
+}
+
+.carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 500px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .mode-selection, #test-section, #results-section {
+        padding: 15px;
+    }
+
+    .mode-selection h2, #test-section h2, #results-section h2 {
+        font-size: 1.5em;
+    }
+
+    .mode h3 {
+        font-size: 1.3em;
+    }
+
+    .mode p {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .answer-options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .answer-options button {
+        margin: 5px 0;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    .video-container {
+        width: 150px;
+    }
+
+    .playlist-section {
+        padding: 15px;
+    }
+
+    .playlist-section h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    #playlist li audio {
+        width: 100px;
+    }
+}

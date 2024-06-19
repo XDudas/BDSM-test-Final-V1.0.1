@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artur - Página de Memes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .nav-item .nav-link {
+            color: #fff !important;
+            font-size: 1.1em;
+        }
+        .nav-item .nav-link:hover {
+            color: #d4d4d4 !important;
+        }
+        .content {
+            padding: 30px;
+            text-align: center;
+            background-color: #fff;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            animation: fadeIn 2s;
+        }
+        .content h2 {
+            color: #343a40;
+            animation: fadeInDown 1s;
+        }
+        .content p {
+            font-size: 1.2em;
+            color: #6c757d;
+            margin-top: 20px;
+            animation: fadeInUp 1s;
+        }
+        .media {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+        .media-item {
+            flex: 1 1 calc(33.333% - 20px);
+            border: 5px solid #343a40;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: zoomIn 1s;
+        }
+        .media-item img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .legendary-quote {
+            font-size: 1.5em;
+            color: #343a40;
+            margin-top: 30px;
+            animation: pulse 2s infinite;
+        }
+        .btn-meme {
+            background-color: #343a40;
+            color: #fff;
+            font-size: 1.2em;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn-meme:hover {
+            background-color: #495057;
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                margin: 10px;
+                max-width: 100%;
+            }
+            .media-item {
+                flex: 1 1 100%;
+            }
+        }
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 1.2em;
+            }
+            .nav-item .nav-link {
+                font-size: 1em;
+            }
+            .legendary-quote {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand animate__animated animate__bounce" href="#">MEMES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link animate__animated animate__fadeInRight" href="indexx.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animate__animated animate__fadeInRight" href="duarte.html">Duarte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animate__animated animate__fadeInRight" href="miguel.html">Miguel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animate__animated animate__fadeInRight" href="diana.html">Diana</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animate__animated animate__fadeInRight" href="artur.html">Artur</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animate__animated animate__fadeInRight" href="yasmin.html">Yasmin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animate__animated animate__fadeInRight" href="Meme Diana/indexx.html">Meme Diana</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content animate__animated animate__fadeIn">
+            <h2 class="animate__animated animate__fadeInDown">Sobre o Artur</h2>
+            <p class="animate__animated animate__fadeInUp">
+                Artur é o tipo de pessoa que passou por muitas dificuldades na vida e começou a usar "substâncias divinas" para lidar com os problemas sem partir a boca a todos que o irritam. Sofreu ferimentos em combate durante sua vida, e uma das ocasiões foi com a testa de aeroporto santa azeiteira que o mandou para o hospital com muitas dores em um lugar que não mencionamos. No entanto, ele é uma pessoa de confiança, sendo o segundo pai do grupo junto com o Duarte, para lidar com as merdas dos outros e depois rir das figuras com ele.
+            </p>
+            <p class="animate__animated animate__fadeInUp">
+                Artur é confiável, trabalhador e realista. Lembre-se, se falar merda, leva com uma cabeçada no céu da boca, porque ele é um bolicao.
+            </p>
+            <div class="media">
+                <div class="media-item animate__animated animate__zoomIn">
+                    <img src="artur.jpg" alt="Artur">
+                </div>
+                <div class="media-item animate__animated animate__zoomIn">
+                    <img src="artur2.jpg" alt="Artur">
+                </div>
+                <div class="media-item animate__animated animate__zoomIn" id="audio-trigger">
+                    <img src="artur3.jpg" alt="Artur">
+                    <audio id="audio-player">
+                        <source src="audioartur.mp3" type="audio/mp3">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                </div>
+            </div>
+            <p class="legendary-quote animate__animated animate__pulse">"Água fria do bidé uma cona aberta e um caralho em pé sete putas e um cabrão a fuder num camião ... "</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('audio-trigger').addEventListener('click', function() {
+            var audio = document.getElementById('audio-player');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    </script>
+</body>
+</html>

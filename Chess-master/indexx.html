@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chess Master</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        h1, p {
+            color: #ff4081;
+        }
+        #board {
+            border: 1px solid #000;
+            width: 642px;
+            height: 642px;
+            margin: 20px auto;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .overlay-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #222;
+            color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .overlay-button {
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .overlay-button:hover {
+            background-color: #e03070;
+        }
+        #promotionList li a {
+            width: 60px;
+            height: 60px;
+            display: block;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        #promotionList li a:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+        .navbar {
+            background-color: #1f1f1f;
+        }
+        .navbar-brand, .nav-link {
+            color: #ff4081 !important;
+        }
+        .nav-link:hover {
+            color: #e03070 !important;
+        }
+        .container {
+            max-width: 900px;
+        }
+        .card {
+            background-color: #222;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .card-body {
+            color: #f0f0f0;
+        }
+        .btn-custom {
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #e03070;
+        }
+    </style>
+</head>
+<body onload="setup();" class="bg-dark">
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="indexx.html">Chess Master</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Chess-master-rules.html">About Minigame</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Creator.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container text-center my-4">
+    <h1 class="display-4">Chess Master</h1>
+    <p id="turnInfo" class="lead">Player's turn: <b>White</b></p>
+    <div class="card">
+        <div class="card-body">
+            <section id="board" class="mx-auto">
+                <div class="overlay" id="promotionMessage">
+                    <div class="overlay-inner">
+                        <span class="overlay-title h4">Promotion!</span>
+                        <p class="overlay-text" id="alertText"></p>
+                        <ul id="promotionList" class="white list-inline">
+                            <li class="list-inline-item"><a href="#" class="promotion-button queen" onclick="promote('queen');"></a></li>
+                            <li class="list-inline-item"><a href="#" class="promotion-button castle" onclick="promote('castle');"></a></li>
+                            <li class="list-inline-item"><a href="#" class="promotion-button bishop" onclick="promote('bishop');"></a></li>
+                            <li class="list-inline-item"><a href="#" class="promotion-button knight" onclick="promote('knight');"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="overlay" id="errorMessage">
+                    <div class="overlay-inner">
+                        <span class="overlay-title h4">Error!</span>
+                        <p class="overlay-text" id="errorText"></p>
+                        <a href="#" class="overlay-button" onclick="closeError();">Close</a>
+                    </div>
+                </div>
+                <div class="overlay" id="endMessage">
+                    <div class="overlay-inner">
+                        <span class="overlay-title h4">Game Over!</span>
+                        <p class="overlay-text" id="endText"></p>
+                        <a href="#" class="overlay-button" onclick="newGame();">New Game</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Add the restart button outside the board section -->
+<div class="text-center mt-4">
+    <button id="restartButton" class="btn btn-custom">Restart Game</button>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+</html>
