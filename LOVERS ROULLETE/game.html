@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="gamestyle.css">
+</head>
+<body>
+    <div id="scoreboards-left" class="scoreboards-side"></div>
+    <div class="game-container" id="game-container">
+        <h1>Player Turn</h1>
+        <h2 id="turn-display">Player 1's turn</h2>
+        <button id="draw-button" onclick="playRound(currentPlayer)">Draw</button>
+        <button id="next-round-button" onclick="nextRound()" style="display: none;">Next Round</button>
+        <button id="end-game-button" onclick="endGame()">End Game</button> <!-- New Button -->
+        <button class="info-button" onclick="toggleCreatorsPopup()">Creators</button> <!-- New Button -->
+    </div>
+    <div id="scoreboards-right" class="scoreboards-side"></div>
+
+    <div id="creators-popup" class="popup" style="display:none;"> <!-- New Popup -->
+        <div class="popup-content">
+            <span class="close" onclick="toggleCreatorsPopup()">&times;</span>
+            <h2>Creators</h2>
+            <div class="creator-info">
+                <img src="img/Miguel.png" alt="Za" class="creator-img">
+                <p><b>Za</b><br>Game Developer</p>
+            </div>
+            <div class="creator-info">
+                <img src="img/Duarte.png" alt="XDudas" class="creator-img">
+                <p><b>XDudas</b><br>Front and Back-end Developer Assistant</p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="gunshotSound" src="gunshot.mp3"></audio>
+    <audio id="emptyshotSound" src="emptyshot.mp3"></audio>
+    <script src="gamescript.js"></script>
+</body>
+</html>
+
