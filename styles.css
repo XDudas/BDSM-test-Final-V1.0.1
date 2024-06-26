@@ -16,17 +16,23 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    border-bottom: 2px solid #ff4081;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
     font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #000;
 }
 
 header p {
     margin: 10px 0 0;
     font-size: 1.2em;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #000;
 }
 
 main {
@@ -53,11 +59,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 2px 2px 5px #000, inset -2px -2px 5px #666;
 }
 
 .wall-space {
     cursor: pointer;
     background-color: #e0e0e0;
+    box-shadow: inset 2px 2px 5px #aaa, inset -2px -2px 5px #fff;
 }  
 
 .pawn {
@@ -65,6 +73,7 @@ main {
     height: 20px;
     background-color: red;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .pawn2 {
@@ -72,6 +81,7 @@ main {
     height: 20px;
     background-color: blue;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .wall-space.horizontal.wall {
@@ -79,6 +89,7 @@ main {
     width: 100%;
     height: 10px;
     position: absolute;
+    box-shadow: 2px 2px 5px #000, -2px -2px 5px #888;
 }
 
 .wall-space.vertical.wall {
@@ -86,6 +97,7 @@ main {
     width: 10px;
     height: 100%;
     position: absolute;
+    box-shadow: 2px 2px 5px #000, -2px -2px 5px #888;
 }
 
 .wall {
@@ -102,13 +114,15 @@ button {
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
     margin: 10px;
+    box-shadow: 2px 2px 5px #000;
 }
 
 button:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
+    box-shadow: 4px 4px 10px #000;
 }
 
 #win-message {
@@ -119,6 +133,7 @@ button:hover {
 
 #win-message p {
     font-size: 1.5em;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .mode-selection, #test-section, #results-section {
@@ -137,31 +152,33 @@ button:hover {
     font-size: 2em;
     margin-bottom: 20px;
     color: #ff4081;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .mode {
     margin-bottom: 20px;
+    background: #333;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 2px 2px 5px #000, -2px -2px 5px #666;
+}
+
+.mode:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px #000, -4px -4px 15px #888;
 }
 
 .mode h3 {
     font-size: 1.7em;
     margin-bottom: 10px;
     color: #64ffda;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .mode p {
     font-size: 1.1em;
     margin-bottom: 15px;
-}
-
-button {
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin: 10px;
 }
 
 button.strongly-agree {
@@ -189,17 +206,13 @@ button.strongly-disagree {
     color: white;
 }
 
-button:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
 footer {
     background-color: #1f1f1f;
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
     font-size: 0.9em;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
 }
 
 footer a {
@@ -220,6 +233,7 @@ footer a:hover {
     font-size: 1.8em;
     margin-bottom: 20px;
     color: #64ffda;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .download-section a {
@@ -231,11 +245,13 @@ footer a:hover {
     text-decoration: none;
     font-size: 1.1em;
     transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 2px 2px 5px #000;
 }
 
 .download-section a:hover {
     background-color: #036ee0;
     transform: scale(1.05);
+    box-shadow: 4px 4px 10px #000;
 }
 
 .video-container {
@@ -248,6 +264,9 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .video-left {
@@ -272,10 +291,12 @@ footer a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 2px 2px 5px #000;
 }
 
 .mute-button:hover {
     background-color: #e03070;
+    box-shadow: 4px 4px 10px #000;
 }
 
 .toggle-video {
@@ -286,10 +307,12 @@ footer a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 2px 2px 5px #000;
 }
 
 .toggle-video:hover {
     background-color: #e03070;
+    box-shadow: 4px 4px 10px #000;
 }
 
 .playlist-section {
@@ -308,25 +331,11 @@ footer a:hover {
     font-size: 2em;
     margin-bottom: 20px;
     color: #ff4081;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .playlist-section input {
     margin-bottom: 10px;
-}
-
-button {
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin: 10px;
-}
-
-button:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
 }
 
 .playlist-container {
@@ -334,6 +343,7 @@ button:hover {
     border-radius: 10px;
     padding: 20px;
     max-width: 100%;
+    box-shadow: inset 2px 2px 5px #000, inset -2px -2px 5px #666;
 }
 
 #playlist {
@@ -349,6 +359,7 @@ button:hover {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    box-shadow: inset 2px 2px 5px #000, inset -2px -2px 5px #666;
 }
 
 #playlist li img {
@@ -379,6 +390,7 @@ button:hover {
 #playlist li button {
     background-color: #f44336;
     color: white;
+    box-shadow: 2px 2px 5px #000;
 }
 
 .carousel-inner {
@@ -396,6 +408,7 @@ button:hover {
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     padding: 10px 20px;
+    box-shadow: 2px 2px 5px #000;
 }
 
 .carousel-control-prev-icon,
@@ -403,6 +416,7 @@ button:hover {
     background-color: #000;
     border-radius: 50%;
     padding: 10px;
+    box-shadow: 2px 2px 5px #000;
 }
 
 .hidden {

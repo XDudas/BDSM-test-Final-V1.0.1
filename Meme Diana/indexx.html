@@ -6,131 +6,11 @@
     <title>Página de Memes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            overflow-x: hidden;
-        }
-        .navbar {
-            background-color: #343a40;
-        }
-        .navbar-brand {
-            color: #fff !important;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .nav-item .nav-link {
-            color: #fff !important;
-            font-size: 1.1em;
-        }
-        .nav-item .nav-link:hover {
-            color: #d4d4d4 !important;
-        }
-        .content {
-            padding: 30px;
-            text-align: center;
-            background-color: #fff;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            animation: fadeIn 2s;
-        }
-        .content h2 {
-            color: #343a40;
-            animation: fadeInDown 1s;
-        }
-        .content p {
-            font-size: 1.2em;
-            color: #6c757d;
-            margin-top: 20px;
-            animation: fadeInUp 1s;
-        }
-        .content .frame {
-            display: inline-block;
-            padding: 10px;
-            border: 5px solid #343a40;
-            border-radius: 10px;
-            margin-top: 20px;
-            animation: zoomIn 1s;
-        }
-        .content .frame img {
-            border-radius: 10px;
-            width: 100%;
-            height: auto;
-        }
-        .carousel-inner {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        .carousel-item img {
-            object-fit: cover;
-            height: 500px;
-        }
-        .carousel-caption {
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            padding: 10px 20px;
-            animation: fadeIn 1s ease-in-out;
-        }
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: #000;
-            border-radius: 50%;
-            padding: 10px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @media (max-width: 768px) {
-            .content {
-                padding: 20px;
-                margin: 10px;
-                max-width: 100%;
-            }
-            .carousel-item img {
-                height: 300px;
-            }
-        }
-        @media (max-width: 576px) {
-            .navbar-brand {
-                font-size: 1.2em;
-            }
-            .nav-item .nav-link {
-                font-size: 1em;
-            }
-            .content h2 {
-                font-size: 1.5em;
-            }
-            .content p {
-                font-size: 1em;
-            }
-            .carousel-item img {
-                height: 200px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styless.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand animate__animated animate__bounce" href="#">MEMES</a>
+        <a class="navbar-brand animate__animated animate__bounce" href="../index.php">MEMES</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -168,7 +48,7 @@
                 continuar a adicionar mais momentos felizes e inesquecíveis a este nosso baú digital.
             </p>
             <div class="frame animate__animated animate__zoomIn">
-                <img src="grupo.jpg" alt="Foto do grupo">
+                <img src="grupo.jpg" alt="Foto do grupo" class="img-fluid">
             </div>
         </div>
     </div>

@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "20.15.0",
+    "configurations": [
+        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch HTTP Server",
+            "program": "${workspaceFolder}/Build/node_modules/http-server/bin/http-server",
+            "args": [
+                ".",
+                "-p",
+                "8000"
+            ],
+            "cwd": "${workspaceFolder}/Build"
+        }
+    ]
+}

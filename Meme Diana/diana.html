@@ -6,117 +6,7 @@
     <title>Diana - Página de Memes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            overflow-x: hidden;
-        }
-        .navbar {
-            background-color: #343a40;
-        }
-        .navbar-brand {
-            color: #fff !important;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .nav-item .nav-link {
-            color: #fff !important;
-            font-size: 1.1em;
-        }
-        .nav-item .nav-link:hover {
-            color: #d4d4d4 !important;
-        }
-        .content {
-            padding: 30px;
-            text-align: center;
-            background-color: #fff;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            animation: fadeIn 2s;
-        }
-        .content h2 {
-            color: #343a40;
-            animation: fadeInDown 1s;
-        }
-        .content p {
-            font-size: 1.2em;
-            color: #6c757d;
-            margin-top: 20px;
-            animation: fadeInUp 1s;
-        }
-        .media {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            animation: fadeIn 2s;
-        }
-        .media-item {
-            flex: 1 1 calc(33.333% - 20px);
-            border: 5px solid #343a40;
-            border-radius: 10px;
-            overflow: hidden;
-            animation: zoomIn 1s;
-        }
-        .media-item img,
-        .media-item video {
-            width: 100%;
-            height: auto;
-        }
-        .legendary-quote {
-            font-size: 1.5em;
-            color: #343a40;
-            margin-top: 30px;
-            animation: pulse 2s infinite;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        @media (max-width: 768px) {
-            .content {
-                padding: 20px;
-                margin: 10px;
-                max-width: 100%;
-            }
-            .media-item {
-                flex: 1 1 100%;
-            }
-        }
-        @media (max-width: 576px) {
-            .navbar-brand {
-                font-size: 1.2em;
-            }
-            .nav-item .nav-link {
-                font-size: 1em;
-            }
-            .legendary-quote {
-                font-size: 1.2em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styless.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -162,19 +52,19 @@
             </p>
             <div class="media">
                 <div class="media-item animate__animated animate__zoomIn">
-                    <img src="diana.jpg" alt="Diana">
+                    <img src="diana.jpg" alt="Diana" class="img-fluid">
                 </div>
                 <div class="media-item animate__animated animate__zoomIn">
-                    <img src="diana2.jpg" alt="Diana">
+                    <img src="diana2.jpg" alt="Diana" class="img-fluid">
                 </div>
                 <div class="media-item animate__animated animate__zoomIn">
-                    <video controls autoplay style="margin-top: 10px;">
+                    <video controls autoplay class="img-fluid">
                         <source src="diana3.mp4" type="video/mp4">
                         Seu navegador não suporta o elemento de vídeo.
                     </video>
                 </div>
             </div>
-            <p class="legendary-quote animate__animated animate__pulse">"Não faças o que faço , faz o que digo!!"</p>
+            <p class="legendary-quote animate__animated animate__pulse">"Não faças o que faço, faz o que digo!!"</p>
         </div>
     </div>
 

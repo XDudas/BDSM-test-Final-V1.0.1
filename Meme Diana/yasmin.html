@@ -6,165 +6,7 @@
     <title>Yasmin - Página de Memes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            overflow-x: hidden;
-        }
-        .navbar {
-            background-color: #343a40;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        .navbar-brand {
-            color: #fff !important;
-            font-size: 1.8em;
-            font-weight: bold;
-            animation: tada 2s infinite;
-        }
-        .nav-item .nav-link {
-            color: #fff !important;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-        }
-        .nav-item .nav-link:hover {
-            color: #d4d4d4 !important;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        }
-        .content {
-            padding: 30px;
-            text-align: center;
-            background-color: #fff;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            max-width: 900px;
-            animation: fadeIn 2s;
-            position: relative;
-            z-index: 1;
-        }
-        .content:before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-            z-index: -1;
-            border-radius: 10px;
-            animation: pulseBorder 2s infinite;
-        }
-        .content h2 {
-            color: #343a40;
-            animation: fadeInDown 1s;
-        }
-        .content p {
-            font-size: 1.2em;
-            color: #6c757d;
-            margin-top: 20px;
-            animation: fadeInUp 1s;
-        }
-        .media {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            animation: fadeIn 2s;
-        }
-        .media-item {
-            flex: 1 1 calc(45% - 20px);
-            border: 5px solid #343a40;
-            border-radius: 10px;
-            overflow: hidden;
-            animation: zoomIn 1s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .media-item:hover {
-            transform: scale(1.05);
-        }
-        .media-item img,
-        .media-item video {
-            width: 100%;
-            height: auto;
-        }
-        .legendary-quote {
-            font-size: 1.8em;
-            color: #343a40;
-            margin-top: 30px;
-            animation: pulse 2s infinite;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        audio {
-            margin-top: 30px;
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        @keyframes pulseBorder {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        @keyframes tada {
-            0% { transform: scale(1); }
-            10%, 20% { transform: scale(0.9) rotate(-3deg); }
-            30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
-            40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
-            100% { transform: scale(1) rotate(0); }
-        }
-        @media (max-width: 768px) {
-            .content {
-                padding: 20px;
-                margin: 10px;
-                max-width: 100%;
-            }
-            .media-item {
-                flex: 1 1 calc(100% - 20px);
-            }
-            .legendary-quote {
-                font-size: 1.2em;
-            }
-        }
-        @media (max-width: 576px) {
-            .navbar-brand {
-                font-size: 1.2em;
-            }
-            .nav-item .nav-link {
-                font-size: 1em;
-            }
-            .content h2 {
-                font-size: 1.5em;
-            }
-            .content p {
-                font-size: 1em;
-            }
-            .legendary-quote {
-                font-size: 1em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styless.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -203,44 +45,33 @@
         <div class="content animate__animated animate__fadeIn">
             <h2 class="animate__animated animate__fadeInDown">Sobre a Yasmin</h2>
             <p class="animate__animated animate__fadeInUp">
-                Yasmin é uma brasileira fuinhas que namora com Miguel Figueiredo UWU. É mais conhecida por beijar as amigas dela e dizer que um selinho não é um beijo, e incentiva o namorado a beijar o seu melhor amigo. Isso já foi considerado por ele e Duarte Leite como um ato panilas, e que ela devia ter vergonha na cara. Mas o que fazemos aos brasileiros quando são assim é meter-lhes a pila na boca para calar ou metê-los no restaurante mais próximo para não nos incomodarem mais.
+                Yasmin é uma brasileira que adora festas e sempre está pronta para qualquer aventura. Com seu espírito livre e coração caloroso, ela conquista todos ao seu redor. Sua frase de marca registrada é "Eu sou brasileira, comedora de gajas no ice hehehe".
             </p>
             <p class="animate__animated animate__fadeInUp">
-                Mas, acima de tudo, Yasmin é uma boa amiga para a Diana, cuidando dela e preocupando-se com ela, assim como faz com o seu namorado. Com Duarte Leite, ela tem uma rivalidade sobre quem come o cu do Miguel Figueiredo. Ela pensa que Artur é uma má influência para a Diana por causa das suas "substâncias divinas".
+                Além de ser extremamente sociável e divertida, Yasmin também é uma amiga leal e confiável, sempre pronta para apoiar seus amigos em qualquer situação. Seu senso de humor e alegria contagiante tornam qualquer momento ao seu lado inesquecível.
             </p>
             <div class="media">
                 <div class="media-item animate__animated animate__zoomIn">
-                    <img src="yasmin.jpg" alt="Yasmin">
+                    <img src="yasmin.jpg" alt="Yasmin" class="img-fluid">
                 </div>
                 <div class="media-item animate__animated animate__zoomIn">
-                    <img src="yasmin2.jpg" alt="Yasmin">
+                    <img src="yasmin2.jpg" alt="Yasmin" class="img-fluid">
                 </div>
                 <div class="media-item animate__animated animate__zoomIn">
-                    <img src="yasmin3.jpg" alt="Yasmin">
-                </div>
-                <div class="media-item animate__animated animate__zoomIn">
-                    <video controls loop style="margin-top: 10px;">
-                        <source src="yasmin.mp4" type="video/mp4">
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
-                </div>
-                <div class="media-item animate__animated animate__zoomIn">
-                    <video controls loop style="margin-top: 10px;">
+                    <video controls autoplay class="img-fluid">
                         <source src="yasmin2.mp4" type="video/mp4">
                         Seu navegador não suporta o elemento de vídeo.
                     </video>
                 </div>
             </div>
-            <p class="legendary-quote animate__animated animate__pulse">"MIMIMMIMIMIMIMIMI"</p>
+            <p class="legendary-quote animate__animated animate__pulse">"Eu sou brasileira, comedora de gajas no ice hehehe"</p>
         </div>
     </div>
 
-    <div class="text-center mt-5">
-        <audio controls autoplay loop>
-            <source src="yasmin.mp3" type="audio/mp3">
-            Seu navegador não suporta o elemento de áudio.
-        </audio>
-    </div>
+    <audio controls autoplay loop>
+        <source src="yasmin.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
 
     <footer class="footer mt-5 py-3 text-center">
         <div class="container">
@@ -253,4 +84,3 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
